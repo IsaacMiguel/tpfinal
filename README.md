@@ -13,7 +13,7 @@ Requerimientos
 2. La aplicación cuenta con una base de datos Mongo y se recomienda usar MongooseODM
 3. Panel de ingreso al administrador (url: /admin)
 
-[IMG]http://i68.tinypic.com/25yyhqc.png[/IMG]
+![alt tag](http://es.tinypic.com/r/25yyhqc/9)
 
 3.1 Deberá dar acceso al sistema al usuario que presente las siguientes credenciales
 	Email: admin@admin.com
