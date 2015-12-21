@@ -23,7 +23,7 @@ Requerimientos
 
 
 4. Alta de nuevos empleados (url: /panel/employees/new)
-
+![alt tag](http://i64.tinypic.com/2je8oso.png)
 
 
 4.1 Consiste en un formulario, donde debe validarse el email ingresado y la selección de un password el cual deberá ser ingresado por duplicado en los últimos dos campos
@@ -31,6 +31,7 @@ Requerimientos
 
 
 5. Listado de empleados (url: /panel/employees)
+![alt tag](http://i67.tinypic.com/2njyal0.png)
 
 5.1 Debera permitir la edición y el borrado usando las siguientes urls:
 
@@ -40,13 +41,13 @@ Borrado
 /panel/employees/delete/:id
 
 6. Edición de empleados
-
+![alt tag](http://i67.tinypic.com/adouhz.png)
 
 6.1 A diferencia del formulario de inserción sólo deberá contar con 3 campos Nombre, Apellido y Email
 6.2 Luego de haber editado los datos del empleado de forma correcta deberá redirigir a la url /panel/employees
 
 7. Buscador
-
+![alt tag](http://i67.tinypic.com/122ysyb.png)
 
 En el raiz del sitio debe existir un buscador, cuyo valor de entrada sea utilizado para encontrar los empleados por nombre y apellido, para esto se solicita:
 
