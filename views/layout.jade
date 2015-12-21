@@ -4,5 +4,34 @@ html(lang='en')
     meta(charset='UTF-8')
     meta(name='viewport', content='width=device-width')
     title= title
+    block css
+      link(rel='stylesheet', href='/css/style.styl')
+    style.
+      ul#menu {
+        list-style: none;  
+        position: fixed;
+        top: 0;
+        background: #ccc;
+        margin: 0;
+        left: 0;
+        width: 100%;
+        padding: 10px 20px; 
+      }
+  
+      ul#menu li { 
+        float: right; 
+        padding: 0 10px;
+      }
+
+      h1{
+        padding-top: 20px;
+      }
   body
+    -if (user) {
+    ul#menu
+      li Welcome
+        b #{user.email}
+      li
+        a(href="/logout") Sign-Out
+  - }
     block content

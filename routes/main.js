@@ -11,6 +11,11 @@ var adminAuth = function (req, res, next) {
   }
 }
 
+app.use(function(req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
+
 app.get('/login', function(req, res){
   res.render('login', { title: 'Login'});
 });
@@ -36,7 +41,8 @@ app.post('/panel/employees/new', adminAuth, function(req, res){
   console.log(req.body);
   var e = new Employees({ name: req.body.name,
                         lastName: req.body.lastName,
-                        email: req.body.email
+                        email: req.body.email,
+			password: req.body.password
                       });
 
     e.save(function(err, doc){
