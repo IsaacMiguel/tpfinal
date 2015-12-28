@@ -8,19 +8,23 @@ html(lang='en')
       link(rel='stylesheet', href='/css/style.styl')
     style.
       ul#menu {
-        list-style: none;  
+        list-style: none;
         position: fixed;
         top: 0;
         background: #ccc;
         margin: 0;
         left: 0;
         width: 100%;
-        padding: 10px 20px; 
+        padding: 10px 20px;
       }
-  
-      ul#menu li { 
-        float: right; 
+
+      ul#menu li {
+        float: right;
         padding: 0 10px;
+      }
+
+      ul li a {
+        text-decoration: none;
       }
 
       h1{
@@ -29,9 +33,13 @@ html(lang='en')
   body
     -if (user) {
     ul#menu
-      li Welcome
+      li Welcome/
         b #{user.email}
       li
         a(href="/logout") Sign-Out
+      li
+        a(href="/employee/search") Search
+      li
+        a(href="/panel") List
   - }
     block content

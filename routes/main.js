@@ -20,7 +20,7 @@ app.get('/login', function(req, res){
   res.render('login', { title: 'Login'});
 });
 
-app.post('/login', passport.authenticate('AdminLogin', 
+app.post('/login', passport.authenticate('AdminLogin',
   { successRedirect: '/panel',
     failureRedirect: '/login',
     failureFlash: true }));
@@ -69,13 +69,13 @@ app.get('/panel/employees/delete/:id', adminAuth, function (req, res) {
   });
 });
 
-app.get('/panel/employees/edit/:id', adminAuth, function (req, res){ 
+app.get('/panel/employees/edit/:id', adminAuth, function (req, res){
   Employees.findOne({ _id: req.params.id }, function(err, doc){
         if(!err){
             res.render('edit', { title: 'Edit', employee: doc});
         } else {
-            res.end(err);    
-        }    
+            res.end(err);
+        }
     });
 });
 
@@ -96,4 +96,8 @@ app.post('/panel/employees/edit/:id', adminAuth, function (req, res) {
       res.end(err);
     }
   });
+});
+
+app.get('/employee/search', adminAuth, function (req, res) {
+  res.render('search', { title: 'Employee Wiki' });
 });
