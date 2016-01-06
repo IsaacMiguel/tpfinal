@@ -99,5 +99,13 @@ app.post('/panel/employees/edit/:id', adminAuth, function (req, res) {
 });
 
 app.get('/employee/search', adminAuth, function (req, res) {
-  res.render('search', { title: 'Employee Wiki' });
+  //res.render('search', { title: 'Employee Wiki' });
+  // { type: 'password'}, { type:0 }
+  res.render('search', { title: 'Employee Wiki' } );
+});
+
+app.post('/employee/search/:key', adminAuth, function (req, res) {
+  Employees.find({ name: new RegExp(".*"+req.params.key+".*")}, function (err, docs) {
+    res.json(docs);
+  });
 });

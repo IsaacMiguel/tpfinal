@@ -2,13 +2,19 @@ extends layout
 
 block content
   h1= title
-  p Welcome to Employee Wiki
-  form(action='', method='post')
-    div
-      input(type='text', name='search', id='search', placeholder='Type to search...')
-      input(type='submit', value='Search' )
-    div.content
+  p
+    Welcome to Employee Wiki
+  div
+    input(type='text', name='str', id='str', placeholder='Type to search...')
+    input(id='search', type='button', value='Search')
+  hr
+  div#resul
 
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js')
   script.
-    $(document).ready();
+    $(document).ready(
+      $('#search').click( function () {
+        var searching = $('#str').val;
+        console.log("-"+searching);
+      });
+    );
