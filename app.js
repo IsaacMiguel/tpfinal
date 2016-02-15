@@ -11,6 +11,7 @@ var flash = require('connect-flash');
 var passport = exports.passport = require('passport');
 
 console.log('prueba rama1 otra vez');
+console.log("hola vieja");
 
 var routes = require('./routes/index');
 var users = require('./routes/user');
